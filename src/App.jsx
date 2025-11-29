@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
-import { Rocket, Users, Calendar, BookOpen, ArrowRight, Menu, X, CheckCircle, Mail, MapPin } from 'lucide-react';
+import { Rocket, Users, Calendar, BookOpen, ArrowRight, Menu, X, CheckCircle, Mail, MapPin, Clock, Info } from 'lucide-react';
 
 const ClubEmprendimiento = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null); // Estado para el evento seleccionado (modal)
 
-  // Datos de ejemplo basados en tu trabajo real
+  // Datos de ejemplo basados en tu trabajo real, ahora con MÁS detalles
   const upcomingEvents = [
     {
       id: 1,
       title: "Desarrolla tu MVP en 60 Minutos",
       date: "Próximamente",
+      time: "16:00 - 18:00",
+      location: "Aula H1.10, ETSII",
       description: "Aprende a validar tu idea sin escribir código. Usaremos Carrd, Google Sheets y Make.",
+      fullDescription: "En este taller práctico intensivo, romperemos el mito de que necesitas meses de programación para lanzar una idea. Aprenderás a construir un flujo de validación completo usando herramientas No-Code. Saldrás del taller con una Landing Page funcional conectada a una base de datos y un sistema de email automático.",
+      agenda: [
+        "Introducción: La trampa de la sobre-ingeniería",
+        "Herramientas: Carrd, Airtable y Make",
+        "Live Demo: Construyendo en tiempo real",
+        "Estrategias de validación rápida"
+      ],
       tag: "Taller Práctico",
       highlight: true
     },
@@ -18,7 +28,16 @@ const ClubEmprendimiento = () => {
       id: 2,
       title: "Start-up Camp Sputnik: Debrief",
       date: "10 de Diciembre",
+      time: "17:30 - 19:00",
+      location: "Sala de Juntas, ETSII",
       description: "Sesión de networking y conclusiones tras el evento Sputnik 2025. Compartiremos aprendizajes de los fundadores de Wuolah y Capchase.",
+      fullDescription: "Una sesión exclusiva para compartir los 'insights' más potentes extraídos del Start-up Camp de Sputnik. Analizaremos las claves de crecimiento de startups sevillanas como Wuolah y debatiremos sobre las oportunidades actuales en el ecosistema emprendedor.",
+      agenda: [
+        "Resumen del evento Sputnik 2025",
+        "Lecciones aprendidas de Wuolah y Capchase",
+        "Networking con pizza y refrescos",
+        "Presentación de nuevos proyectos del club"
+      ],
       tag: "Networking",
       highlight: false
     }
@@ -41,6 +60,18 @@ const ClubEmprendimiento = () => {
       icon: <Users className="w-6 h-6 text-indigo-600" />
     }
   ];
+
+  // Función para abrir el modal
+  const openModal = (event) => {
+    setSelectedEvent(event);
+    document.body.style.overflow = 'hidden'; // Evitar scroll de fondo
+  };
+
+  // Función para cerrar el modal
+  const closeModal = () => {
+    setSelectedEvent(null);
+    document.body.style.overflow = 'auto'; // Restaurar scroll
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
@@ -165,7 +196,12 @@ const ClubEmprendimiento = () => {
 
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
             {upcomingEvents.map((event) => (
-              <div key={event.id} className={`flex flex-col rounded-lg shadow-lg overflow-hidden border ${event.highlight ? 'border-indigo-500 ring-2 ring-indigo-200' : 'border-gray-200'}`}>
+              // Añadido onClick para abrir el modal
+              <div 
+                key={event.id} 
+                onClick={() => openModal(event)}
+                className={`flex flex-col rounded-lg shadow-lg overflow-hidden border cursor-pointer transition-transform hover:scale-105 ${event.highlight ? 'border-indigo-500 ring-2 ring-indigo-200' : 'border-gray-200'}`}
+              >
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
                     <p className="text-sm font-medium text-indigo-600">
@@ -176,19 +212,13 @@ const ClubEmprendimiento = () => {
                       <p className="mt-3 text-base text-gray-500">{event.description}</p>
                     </div>
                   </div>
-                  <div className="mt-6 flex items-center">
-                    <div className="flex-shrink-0">
-                      <Calendar className="h-6 w-6 text-gray-400" />
+                  <div className="mt-6 flex items-center justify-between">
+                    <div className="flex items-center text-gray-500">
+                        <Calendar className="h-5 w-5 mr-2" />
+                        <span className="text-sm font-medium">{event.date}</span>
                     </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">
-                        {event.date}
-                      </p>
-                    </div>
-                    <div className="ml-auto">
-                        <button className="text-indigo-600 hover:text-indigo-900 font-medium text-sm flex items-center">
-                            Inscribirme <ArrowRight className="ml-1 w-4 h-4" />
-                        </button>
+                    <div className="flex items-center text-indigo-600 font-medium text-sm">
+                        Ver Detalles <ArrowRight className="ml-1 w-4 h-4" />
                     </div>
                   </div>
                 </div>
@@ -197,6 +227,101 @@ const ClubEmprendimiento = () => {
           </div>
         </div>
       </div>
+
+      {/* --- MODAL DE DETALLES DEL EVENTO --- */}
+      {selectedEvent && (
+        <div className="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+          <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            {/* Overlay de fondo oscuro */}
+            <div 
+              className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" 
+              aria-hidden="true"
+              onClick={closeModal}
+            ></div>
+
+            {/* Centrado vertical del modal */}
+            <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            {/* Contenido del Modal */}
+            <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div className="sm:flex sm:items-start">
+                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                    {/* Header del Modal con Título y Tag */}
+                    <div className="flex justify-between items-start">
+                        <div>
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 mb-2">
+                                {selectedEvent.tag}
+                            </span>
+                            <h3 className="text-2xl leading-6 font-bold text-gray-900" id="modal-title">
+                                {selectedEvent.title}
+                            </h3>
+                        </div>
+                        <button 
+                            onClick={closeModal}
+                            className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none"
+                        >
+                            <X className="h-6 w-6" />
+                        </button>
+                    </div>
+                    
+                    {/* Información Clave (Fecha, Hora, Lugar) */}
+                    <div className="mt-4 bg-gray-50 rounded-lg p-4 grid grid-cols-1 gap-3">
+                        <div className="flex items-center text-gray-700">
+                            <Calendar className="h-5 w-5 mr-3 text-indigo-600" />
+                            <span className="font-medium">{selectedEvent.date}</span>
+                        </div>
+                        <div className="flex items-center text-gray-700">
+                            <Clock className="h-5 w-5 mr-3 text-indigo-600" />
+                            <span className="font-medium">{selectedEvent.time}</span>
+                        </div>
+                        <div className="flex items-center text-gray-700">
+                            <MapPin className="h-5 w-5 mr-3 text-indigo-600" />
+                            <span className="font-medium">{selectedEvent.location}</span>
+                        </div>
+                    </div>
+
+                    {/* Descripción Completa */}
+                    <div className="mt-4">
+                      <h4 className="font-bold text-gray-900 mb-2">Sobre este evento</h4>
+                      <p className="text-sm text-gray-600">
+                        {selectedEvent.fullDescription}
+                      </p>
+                    </div>
+
+                    {/* Agenda */}
+                    {selectedEvent.agenda && (
+                        <div className="mt-4">
+                            <h4 className="font-bold text-gray-900 mb-2">Agenda</h4>
+                            <ul className="text-sm text-gray-600 space-y-2">
+                                {selectedEvent.agenda.map((item, index) => (
+                                    <li key={index} className="flex items-start">
+                                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm">
+                  Inscribirme Ahora
+                </button>
+                <button 
+                    type="button" 
+                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                    onClick={closeModal}
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* --- RECURSOS (Kit de Bienvenida) --- */}
       <div id="recursos" className="py-16 bg-gray-50">
