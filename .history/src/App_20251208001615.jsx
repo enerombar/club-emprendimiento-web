@@ -130,17 +130,18 @@ const ClubEmprendimiento = () => {
                   <span className="block text-indigo-600 xl:inline">iniciativa emprendedora.</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Somos una comunidad de estudiantes de la Universidad de Sevilla unidos por las ideas y el emprendimiento. Aprende a lanzar, asentar y destacar tu proyecto con nosotros a través de nuestras charlas, talleres y más.
+                  Somos una comunidad de estudiantes de la Universidad de Sevilla unidos por las ideas y el emprendimiento. Aprende a lanzar, asentar y destacar tu proyecto con nosotros a través
+de nuestra charlas, talleres y más.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start gap-4">
                   <div className="rounded-md shadow">
                     <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                      Únete al Club
+                      Únete Gratis
                     </a>
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
                     <a href="#actividades" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
-                      Ver Actividades
+                      Ver Talleres
                     </a>
                   </div>
                 </div>
@@ -166,16 +167,16 @@ const ClubEmprendimiento = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-4">
-              <div className="text-4xl font-bold text-indigo-300 mb-2">Aprende</div>
-              <div className="text-indigo-100">Fórmate en nuestros talleres.</div>
+              <div className="text-4xl font-bold text-indigo-300 mb-2">Build</div>
+              <div className="text-indigo-100">Construye soluciones, no solo código.</div>
             </div>
             <div className="p-4 border-l-0 md:border-l border-indigo-700">
-              <div className="text-4xl font-bold text-indigo-300 mb-2">Crea</div>
-              <div className="text-indigo-100">Inicia tu idea de emprendimiento.</div>
+              <div className="text-4xl font-bold text-indigo-300 mb-2">Measure</div>
+              <div className="text-indigo-100">Valida con datos reales.</div>
             </div>
             <div className="p-4 border-l-0 md:border-l border-indigo-700">
-              <div className="text-4xl font-bold text-indigo-300 mb-2">Escala</div>
-              <div className="text-indigo-100">Lleva a la realidad tu proyecto.</div>
+              <div className="text-4xl font-bold text-indigo-300 mb-2">Learn</div>
+              <div className="text-indigo-100">Itera rápido y aprende del mercado.</div>
             </div>
           </div>
         </div>
@@ -190,7 +191,7 @@ const ClubEmprendimiento = () => {
               Próximas Actividades
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-              Actividades programadas para sacarle el máximo provecho a tu proyecto emprendedor.
+              Talleres prácticos diseñados para que salgas con algo construido.
             </p>
           </div>
 
@@ -332,7 +333,7 @@ const ClubEmprendimiento = () => {
               Tu Kit de Inicio Emprendedor
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Ahorra tu tiempo buscando recursos, casi todo lo que necesites se encuentra aquí.
+              Hemos curado las mejores herramientas y lecturas para que no pierdas tiempo buscando.
             </p>
           </div>
 

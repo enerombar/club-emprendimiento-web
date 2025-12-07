@@ -332,7 +332,7 @@ const ClubEmprendimiento = () => {
               Tu Kit de Inicio Emprendedor
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Ahorra tu tiempo buscando recursos, casi todo lo que necesites se encuentra aquí.
+              Ahorra tu tiempo buscando recursos, casi todo lo que necesites se encuentra aquí para que no pierdas tiempo buscando.
             </p>
           </div>
 

@@ -171,11 +171,11 @@ const ClubEmprendimiento = () => {
             </div>
             <div className="p-4 border-l-0 md:border-l border-indigo-700">
               <div className="text-4xl font-bold text-indigo-300 mb-2">Crea</div>
-              <div className="text-indigo-100">Inicia tu idea de emprendimiento.</div>
+              <div className="text-indigo-100">Valida con datos reales.</div>
             </div>
             <div className="p-4 border-l-0 md:border-l border-indigo-700">
-              <div className="text-4xl font-bold text-indigo-300 mb-2">Escala</div>
-              <div className="text-indigo-100">Lleva a la realidad tu proyecto.</div>
+              <div className="text-4xl font-bold text-indigo-300 mb-2">Learn</div>
+              <div className="text-indigo-100">Itera rápido y aprende del mercado.</div>
             </div>
           </div>
         </div>
@@ -190,7 +190,7 @@ const ClubEmprendimiento = () => {
               Próximas Actividades
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-              Actividades programadas para sacarle el máximo provecho a tu proyecto emprendedor.
+              Talleres prácticos diseñados para que salgas con algo construido.
             </p>
           </div>
 
@@ -332,7 +332,7 @@ const ClubEmprendimiento = () => {
               Tu Kit de Inicio Emprendedor
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Ahorra tu tiempo buscando recursos, casi todo lo que necesites se encuentra aquí.
+              Hemos curado las mejores herramientas y lecturas para que no pierdas tiempo buscando.
             </p>
           </div>
 
