@@ -10,17 +10,20 @@ const ClubEmprendimiento = () => {
   // --- (Tus datos de eventos se mantienen igual) ---
   const upcomingEvents = [
     {
-      id: 1,
-      title: "Inauguración Talleres ETSII/Next Digital",
-      date: "9 de Diciembre",
-      time: "12:30",
-      location: "Sala Multiusos, ETSII",
-      description: "Iniciativa que busca potenciar la formación práctica y la empleabilidad de nuestro estudiantado.",
-      fullDescription: "¿Qué ofrecen estos talleres? Durante 2026 se impartirán varios talleres gratuitos, dirigidos por profesionales de la empresa Next Digital. Además, estarán reconocidos con hasta 1-3 créditos, lo que permitirá enriquecer tu portfolio con conocimientos altamente demandados en el sector.",
+      id: 2,
+      title: "Start-up Camp Sputnik: Debrief",
+      date: "10 de Diciembre",
+      time: "17:30 - 19:00",
+      location: "Sala de Juntas, ETSII",
+      description: "Sesión de networking y conclusiones tras el evento Sputnik 2025. Compartiremos aprendizajes de los fundadores de Wuolah y Capchase.",
+      fullDescription: "Una sesión exclusiva para compartir los 'insights' más potentes extraídos del Start-up Camp de Sputnik. Analizaremos las claves de crecimiento de startups sevillanas como Wuolah y debatiremos sobre las oportunidades actuales en el ecosistema emprendedor.",
       agenda: [
-        "Presentación del programa de talleres",
+        "Resumen del evento Sputnik 2025",
+        "Lecciones aprendidas de Wuolah y Capchase",
+        "Networking con pizza y refrescos",
+        "Presentación de nuevos proyectos del club"
       ],
-      tag: "Reunión informativa",
+      tag: "Networking",
       highlight: false
     }
   ];

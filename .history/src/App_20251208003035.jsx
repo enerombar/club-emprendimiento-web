@@ -11,16 +11,36 @@ const ClubEmprendimiento = () => {
   const upcomingEvents = [
     {
       id: 1,
-      title: "Inauguración Talleres ETSII/Next Digital",
-      date: "9 de Diciembre",
-      time: "12:30",
-      location: "Sala Multiusos, ETSII",
-      description: "Iniciativa que busca potenciar la formación práctica y la empleabilidad de nuestro estudiantado.",
-      fullDescription: "¿Qué ofrecen estos talleres? Durante 2026 se impartirán varios talleres gratuitos, dirigidos por profesionales de la empresa Next Digital. Además, estarán reconocidos con hasta 1-3 créditos, lo que permitirá enriquecer tu portfolio con conocimientos altamente demandados en el sector.",
+      title: "Desarrolla tu MVP en 60 Minutos",
+      date: "Próximamente",
+      time: "16:00 - 18:00",
+      location: "Aula H1.10, ETSII",
+      description: "Aprende a validar tu idea sin escribir código. Usaremos Carrd, Google Sheets y Make.",
+      fullDescription: "En este taller práctico intensivo, romperemos el mito de que necesitas meses de programación para lanzar una idea. Aprenderás a construir un flujo de validación completo usando herramientas No-Code. Saldrás del taller con una Landing Page funcional conectada a una base de datos y un sistema de email automático.",
       agenda: [
-        "Presentación del programa de talleres",
+        "Introducción: La trampa de la sobre-ingeniería",
+        "Herramientas: Carrd, Airtable y Make",
+        "Live Demo: Construyendo en tiempo real",
+        "Estrategias de validación rápida"
       ],
-      tag: "Reunión informativa",
+      tag: "Taller Práctico",
+      highlight: true
+    },
+    {
+      id: 2,
+      title: "Start-up Camp Sputnik: Debrief",
+      date: "10 de Diciembre",
+      time: "17:30 - 19:00",
+      location: "Sala de Juntas, ETSII",
+      description: "Sesión de networking y conclusiones tras el evento Sputnik 2025. Compartiremos aprendizajes de los fundadores de Wuolah y Capchase.",
+      fullDescription: "Una sesión exclusiva para compartir los 'insights' más potentes extraídos del Start-up Camp de Sputnik. Analizaremos las claves de crecimiento de startups sevillanas como Wuolah y debatiremos sobre las oportunidades actuales en el ecosistema emprendedor.",
+      agenda: [
+        "Resumen del evento Sputnik 2025",
+        "Lecciones aprendidas de Wuolah y Capchase",
+        "Networking con pizza y refrescos",
+        "Presentación de nuevos proyectos del club"
+      ],
+      tag: "Networking",
       highlight: false
     }
   ];
@@ -30,6 +50,12 @@ const ClubEmprendimiento = () => {
       title: "Kit de Bienvenida",
       desc: "Todo lo que necesitas para empezar: lecturas Lean Startup y herramientas esenciales.",
       icon: <BookOpen className="w-6 h-6 text-indigo-600" />
+    },
+    {
+      title: "Stack No-Code",
+      desc: "Guía de herramientas gratuitas para lanzar proyectos sin coste inicial.",
+      // Aquí seguimos usando el icono Rocket porque es decorativo de la sección, no el logo
+      icon: <Rocket className="w-6 h-6 text-indigo-600" />
     },
     {
       title: "Comunidad",

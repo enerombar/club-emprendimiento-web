@@ -10,7 +10,7 @@ const ClubEmprendimiento = () => {
   // --- (Tus datos de eventos se mantienen igual) ---
   const upcomingEvents = [
     {
-      id: 1,
+      id: 2,
       title: "Inauguración Talleres ETSII/Next Digital",
       date: "9 de Diciembre",
       time: "12:30",
@@ -20,7 +20,7 @@ const ClubEmprendimiento = () => {
       agenda: [
         "Presentación del programa de talleres",
       ],
-      tag: "Reunión informativa",
+      tag: "Networking",
       highlight: false
     }
   ];
