@@ -30,8 +30,7 @@ const ClubEmprendimiento = () => {
     {
       title: "Kit de Bienvenida",
       desc: "Todo lo que necesitas para empezar: lecturas Lean Startup y herramientas esenciales.",
-      icon: <BookOpen className="w-6 h-6 text-indigo-600" />,
-      link: "#"
+      icon: <BookOpen className="w-6 h-6 text-indigo-600" />
     },
     {
       title: "Comunidad",
@@ -335,12 +334,7 @@ const ClubEmprendimiento = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-500 mb-4">{item.desc}</p>
-                <a 
-                  href={item.link} 
-                  target={item.link.startsWith('http') ? "_blank" : "_self"} // Abre Telegram en pestaña nueva
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center cursor-pointer"
-                >
+                <a href="#" className="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
                   Acceder <ArrowRight className="ml-1 w-4 h-4" />
                 </a>
               </div>
