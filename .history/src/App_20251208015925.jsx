@@ -24,7 +24,7 @@ const ClubEmprendimiento = () => {
       highlight: false,
       isExternal: true,
       enableRegistration: true, // ¿Se puede inscribir uno?
-      registrationLink: "https://www.informatica.us.es/index.php/noticias/inauguracion-talleres-etsii-next-digital", // Link específico
+      registrationLink: "https://forms.office.com/e/XgPgbKaGSX", // Link específico
       buttonText: "Más información" // Texto personalizado
     }
   ];
