@@ -336,28 +336,20 @@ const ClubEmprendimiento = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {resources.map((item, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 flex flex-col items-start">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
                 <div className="bg-indigo-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-500 mb-4 flex-1">{item.desc}</p>
-                
-                {/* LÓGICA: Si es comingSoon, muestra etiqueta gris. Si no, muestra enlace azul */}
-                {item.comingSoon ? (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-500 cursor-default">
-                        Próximamente
-                    </span>
-                ) : (
-                    <a 
-                        href={item.link} 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center transition-colors"
-                    >
-                        Acceder <ArrowRight className="ml-1 w-4 h-4" />
-                    </a>
-                )}
+                <p className="text-gray-500 mb-4">{item.desc}</p>
+                <a 
+                  href={item.link} 
+                  target={item.link.startsWith('http') ? "_blank" : "_self"} // Abre Telegram en pestaña nueva
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center cursor-pointer"
+                >
+                  Acceder <ArrowRight className="ml-1 w-4 h-4" />
+                </a>
               </div>
             ))}
           </div>
