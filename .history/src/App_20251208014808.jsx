@@ -168,7 +168,7 @@ const ClubEmprendimiento = () => {
 
       {/* --- STATS / MANTRA --- */}
       {/* --- SOBRE NOSOTROS --- */}
-      <div id="sobre-nosotros" className="py-24 bg-gray-50 overflow-hidden">
+      <div id="sobre-nosotros" className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
             
