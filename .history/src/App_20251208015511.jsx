@@ -285,24 +285,24 @@ const ClubEmprendimiento = () => {
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
                     <div className="flex justify-between items-start mb-2">
-                        {/* Etiqueta Principal (Club vs Externo) */}
-                        {event.isExternal ? (
-                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
-                                <ExternalLink className="w-3 h-3 mr-1" />
-                                Externo {event.organizer && `• ${event.organizer}`}
-                            </span>
-                        ) : (
-                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
-                                <Rocket className="w-3 h-3 mr-1" />
-                                Club US
-                            </span>
-                        )}
-                        
-                        {/* Tu Tag original (Taller, Reunión, etc.) ahora a la derecha en gris */}
-                        <span className="text-xs font-medium text-gray-500 border border-gray-200 px-2 py-0.5 rounded-md">
-                            {event.tag}
-                        </span>
-                    </div>
+                      {/* Etiqueta Principal (Club vs Externo) */}
+                      {event.isExternal ? (
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                              <ExternalLink className="w-3 h-3 mr-1" />
+                              Externo {event.organizer && `• ${event.organizer}`}
+                          </span>
+                      ) : (
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                              <Rocket className="w-3 h-3 mr-1" />
+                              Club US
+                          </span>
+                      )}
+                      
+                      {/* Tu Tag original (Taller, Reunión, etc.) ahora a la derecha en gris */}
+                      <span className="text-xs font-medium text-gray-500 border border-gray-200 px-2 py-0.5 rounded-md">
+                          {event.tag}
+                      </span>
+                  </div>
                     <div className="block mt-2">
                       <p className="text-xl font-semibold text-gray-900">{event.title}</p>
                       <p className="mt-3 text-base text-gray-500">{event.description}</p>
