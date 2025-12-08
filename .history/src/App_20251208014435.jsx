@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 // He quitado 'Rocket' de la importación porque ya no lo usamos para el logo principal,
 // aunque lo dejo importado porque se usa en la sección de "Recursos" y en el fondo decorativo.
-import { Rocket, Users, Calendar, BookOpen, ArrowRight, Menu, X, CheckCircle, Mail, MapPin, Clock, Lightbulb, Target } from 'lucide-react';
+import { Rocket, Users, Calendar, BookOpen, ArrowRight, Menu, X, CheckCircle, Mail, MapPin, Clock } from 'lucide-react';
+
 const ClubEmprendimiento = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
