@@ -383,7 +383,7 @@ const ClubEmprendimiento = () => {
                 <h3 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contacto</h3>
                 <ul className="space-y-2">
                     <li className="flex items-center gap-2"><Mail className="w-4 h-4" />emprendimiento_etsii@us.es</li>
-                    <li className="flex items-center gap-2"><MapPin className="w-4 h-4" />ETSII, Sevilla</li>
+                    <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /> ETSII, Sevilla</li>
                 </ul>
             </div>
         </div>
