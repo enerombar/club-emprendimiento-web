@@ -400,32 +400,32 @@ const ClubEmprendimiento = () => {
               </div>
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 {/* LÓGICA DEL BOTÓN DE INSCRIPCIÓN */}
-                {selectedEvent.enableRegistration ? (
-                    <a
-                        href={selectedEvent.registrationLink || LINK_REGISTRO} // Usa el link del evento, o el general si no hay
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm text-center"
-                    >
-                        {selectedEvent.buttonText || "Inscribirme Ahora"}
-                    </a>
-                ) : (
-                    <button 
-                        type="button" 
-                        disabled
-                        className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-300 text-base font-medium text-gray-500 cursor-not-allowed sm:ml-3 sm:w-auto sm:text-sm"
-                    >
-                        {selectedEvent.buttonText || "Inscripciones Cerradas"}
-                    </button>
-                )}
+{selectedEvent.enableRegistration ? (
+    <a
+        href={selectedEvent.registrationLink || LINK_REGISTRO} // Usa el link del evento, o el general si no hay
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm text-center"
+    >
+        {selectedEvent.buttonText || "Inscribirme Ahora"}
+    </a>
+) : (
+    <button 
+        type="button" 
+        disabled
+        className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-300 text-base font-medium text-gray-500 cursor-not-allowed sm:ml-3 sm:w-auto sm:text-sm"
+    >
+        {selectedEvent.buttonText || "Inscripciones Cerradas"}
+    </button>
+)}
 
-                <button 
-                    type="button" 
-                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={closeModal}
-                >
-                    Cerrar
-                </button>
+<button 
+    type="button" 
+    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+    onClick={closeModal}
+>
+    Cerrar
+</button>
               </div>
             </div>
           </div>
