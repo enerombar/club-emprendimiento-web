@@ -347,15 +347,15 @@ const ClubEmprendimiento = () => {
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             <span className="block">¿Listo para lanzar?</span>
             <div className="rounded-md shadow">
-              <a 
-                href={LINK_REGISTRO}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-              >
-                Únete al Club
-              </a>
-            </div>
+  <a 
+    href={LINK_REGISTRO}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+  >
+    Únete al Club
+  </a>
+</div>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
